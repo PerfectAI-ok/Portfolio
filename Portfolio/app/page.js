@@ -4,9 +4,7 @@ import Navbar from "@/components/Navbar";
 import { Contact, ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
-import { TbSql } from "react-icons/tb";
-import { VscGithub } from "react-icons/vsc";
-import { Java } from "@/public/java.svg";
+
 import TypingText from "@/components/TypingText";
 import ContactSectionGreen from "@/components/ContactSectionGreen";
 
@@ -163,7 +161,7 @@ export default function Home() {
         onMouseLeave={() => setHoverIndex(null)}
       >
         <div className="relative h-56 overflow-hidden border border-blue-100 rounded-md">
-          <img
+          <Image
             src={project.image}            // ← use dynamic src
             alt={project.title}
             fill
