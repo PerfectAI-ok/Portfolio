@@ -1,15 +1,17 @@
-
 "use client";
-import Navbar from "@/components/Navbar";
+// import Navbar from "@/components/Navbar";
+import { Navbar } from "@/components/Navbar";
 import { Contact, ExternalLink, Github } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
 
-import TypingText from "@/components/TypingText";
-import ContactSectionGreen from "@/components/ContactSectionGreen";
+// import TypingText from "@/components/TypingText";
+import { TypingText } from "@/components/TypingText";
+// import ContactSectionGreen from "@/components/ContactSectionGreen";
+import { ContactSectionGreen } from "@/components/ContactSectionGreen";
+import { WordRotate } from "@/components/magicui/word-rotate";
 
 // import { Image } from "next/image";
-
 
 export default function Home() {
   const [hoverIndex, setHoverIndex] = useState(null);
@@ -19,8 +21,13 @@ export default function Home() {
       title: "IntelliQuiz",
       description:
         "Elevate your learning with IntelliQuiz, an AI-powered quiz app that adapts to your knowledge level.",
-      tags: ["React", "Node.js", "MongoDB", "Gemini AI", "WebSockets",
-        "Tailwind CSS"
+      tags: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Gemini AI",
+        "WebSockets",
+        "Tailwind CSS",
       ],
       image: "/IntelliQuiz.png",
       liveLink: "https://intelliquiz-main-4v98.vercel.app/",
@@ -39,16 +46,30 @@ export default function Home() {
       title: "HealthCare AI Assistant",
       description:
         "A voice-driven patient assistant using IBM Watsonx for hands-free interaction, inspired by healthcare challenges during the COVID-19 pandemic.",
-      tags: ["TypeScript", "IBM Watson Assistant", "IBM Cloud DB", "Tailwind CSS"],
+      tags: [
+        "TypeScript",
+        "IBM Watson Assistant",
+        "IBM Cloud DB",
+        "Tailwind CSS",
+      ],
       image: "/AiHealthCare.png",
       liveLink: "https://health-care-ai-assistant-main.vercel.app/",
-      githubLink: "https://github.com/OmkarKathile007/HealthCare_AI_Assistant_MAIN",
+      githubLink:
+        "https://github.com/OmkarKathile007/HealthCare_AI_Assistant_MAIN",
     },
     {
       title: "Surplus Shift",
       description:
         "Realtime Platform platform for connecting surplus food with local NGO's, Reduce Waste, Fight Hunger",
-      tags: ["NextJs", "NodeJs", "MongoDB","IBM Watsonx Assistant","Deeplearning","Image Recongnition","Tailwind CSS"],
+      tags: [
+        "NextJs",
+        "NodeJs",
+        "MongoDB",
+        "IBM Watsonx Assistant",
+        "Deeplearning",
+        "Image Recongnition",
+        "Tailwind CSS",
+      ],
       image: "/surplus.png",
       liveLink: "#",
       githubLink: "https://github.com/OmkarKathile007/Techathon_Main",
@@ -81,13 +102,12 @@ export default function Home() {
     { name: "HTML", icon: "/html.svg" },
     { name: "CSS", icon: "/css.svg" },
     { name: "Tailwind CSS", icon: "/tailwind.svg" },
-      { name: "MySQL", icon: "/mysql.svg" },
+    { name: "MySQL", icon: "/mysql.svg" },
     { name: "Node.js", icon: "/nodejs.svg" },
 
-   
     { name: "MongoDB", icon: "/mongodb.svg" },
     { name: "React", icon: "/react.svg" },
-   
+
     { name: "Python", icon: "/python.svg" },
   ];
 
@@ -112,10 +132,10 @@ export default function Home() {
         ></script>
 
         <div className="absolute inset-0 flex flex-col lg:flex-row items-center justify-center bg-black/50">
-          <div className="w-full lg:w-1/2 px-4 py-8 space-y-6 text-center md:relative md:left-24  lg:text-left">
-            <p className="text-2xl sm:text-3xl text-gray-300 font-bold">
+          <div className="w-full  lg:w-1/2 px-4 py-8 space-y-4  sm:justify-center flex flex-col  md:relative md:left-24  lg:text-left">
+            <span className="md:text-2xl justify-start   sm:text-3xl text-yellow-200 font-bold">
               Hello, I’m
-            </p>
+            </span>
 
             <TypingText
               text="Omkar Kathile"
@@ -123,118 +143,139 @@ export default function Home() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-r from-lime-400 to-green-600 bg-clip-text text-transparent"
             />
 
-            <p className="text-base sm:text-lg text-yellow-200">
+            <p
+              className="text-base sm:text-lg  bg-gradient-to-r from-yellow-200 to-lime-400 
+        bg-clip-text text-transparent "
+            >
               A passionate developer focused on crafting innovative solutions.
             </p>
           </div>
 
           {/* Hidden on small screens; visible from lg and up */}
-          <div className="hidden lg:block w-full lg:w-1/2 p-4">
-            <div className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px]">
-              <spline-viewer
-                className="w-full h-full"
-                url="https://prod.spline.design/gFmi3gyuYFrRr9H8/scene.splinecode"
-              ></spline-viewer>
+          <div className="hidden lg:block w-3/4 lg:w-1/2 p-4">
+            <div className="relative w-full h-auto">
+              <Image
+                src="/monitor1.png"
+                alt="Monitor"
+                width={500}
+                height={350}
+                className="w-full h-full md:mx-16 md:w-5/6 object-cover rounded-lg shadow-lg"
+              />
+              <WordRotate
+                className="absolute top-2/5  left-1/2 -translate-x-1/2 -translate-y-1/2 md:text-4xl sm:text-xl   font-extrabold bg-gradient-to-r from-yellow-200 to-lime-400 
+        bg-clip-text text-transparent "
+                words={[
+                  "TechEnthusiast",
+                  "FullStack Developer",
+                  "Backend Developer",
+                  "Frontend Developer",
+                  "AI Enthusiast",
+                ]}
+              />
             </div>
           </div>
         </div>
       </main>
 
       <section className="py-16 w-full">
-  <div className="max-w-3xl mx-auto text-center mb-12 px-4">
-    <h2 className="text-4xl sm:text-5xl font-semibold
+        <div className="max-w-3xl mx-auto text-center mb-12 px-4">
+          <h2
+            className="text-4xl sm:text-5xl font-semibold
                    bg-gradient-to-l from-lime-400 to-green-600
-                   bg-clip-text text-transparent">
-      My Projects
-    </h2>
-  </div>
+                   bg-clip-text text-transparent"
+          >
+            My Projects
+          </h2>
+        </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
-                  gap-8 w-full max-w-6xl mx-auto px-4">
-    {projects.map((project, index) => (
-      <div
-        key={index}
-        className="glass rounded-xl overflow-hidden group
+        <div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
+                  gap-8 w-full max-w-6xl mx-auto px-4"
+        >
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="glass rounded-xl overflow-hidden group
                    transition-all duration-300 hover:shadow-xl 
                    hover:-translate-y-2"
-        onMouseEnter={() => setHoverIndex(index)}
-        onMouseLeave={() => setHoverIndex(null)}
-      >
-        <div className="relative h-56 overflow-hidden border border-blue-100 rounded-md">
-          <Image
-            src={project.image}            // ← use dynamic src
-            alt={project.title}
-            fill
-            className="absolute inset-0 object-cover object-center
+              onMouseEnter={() => setHoverIndex(index)}
+              onMouseLeave={() => setHoverIndex(null)}
+            >
+              <div className="relative h-56 overflow-hidden border border-blue-100 rounded-md">
+                <Image
+                  src={project.image} // ← use dynamic src
+                  alt={project.title}
+                  fill
+                  className="absolute inset-0 object-cover object-center
                        transition-transform duration-700 ease-in-out"
-          />
-          {/* dark overlay on hover */}
-          <div
-            className="absolute inset-0 bg-black/40
+                />
+                {/* dark overlay on hover */}
+                <div
+                  className="absolute inset-0 bg-black/40
                        opacity-0 group-hover:opacity-100
                        transition-opacity duration-300"
-          />
-          <div
-            className="absolute inset-0 flex items-center justify-center
+                />
+                <div
+                  className="absolute inset-0 flex items-center justify-center
                        opacity-0 group-hover:opacity-100
                        transition-opacity duration-300"
-          >
-            <div className="flex space-x-4">
-              <a
-                href={project.liveLink}
-                className="p-3 rounded-full bg-white text-gray-900
+                >
+                  <div className="flex space-x-4">
+                    <a
+                      href={project.liveLink}
+                      className="p-3 rounded-full bg-white text-gray-900
                            hover:bg-gray-100 transition-colors duration-200"
-                aria-label="View live project"
-              >
-                <ExternalLink className="w-5 h-5" />
-              </a>
-              <a
-                href={project.githubLink}
-                className="p-3 rounded-full bg-white text-gray-900
+                      aria-label="View live project"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                    </a>
+                    <a
+                      href={project.githubLink}
+                      className="p-3 rounded-full bg-white text-gray-900
                            hover:bg-gray-100 transition-colors duration-200"
-                aria-label="View GitHub repository"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
-        </div>
+                      aria-label="View GitHub repository"
+                    >
+                      <Github className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-        <div className="p-6">
-          <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-          <p className="text-muted-foreground mb-4">
-            {project.description}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag, tagIndex) => (
-              <span
-                key={tagIndex}
-                className="inline-block px-3 py-1 rounded-full
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-muted-foreground mb-4">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="inline-block px-3 py-1 rounded-full
                            text-xs font-medium bg-primary/10 text-primary"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
 
-  <div className="mt-16 text-center px-4">
-    <a
-      href="https://github.com/OmkarKathile007"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center px-6 py-3 rounded-full
+        <div className="mt-16 text-center px-4">
+          <a
+            href="https://github.com/OmkarKathile007"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 rounded-full
                  border border-foreground/20 hover:bg-secondary/50
                  transition-all focus:focus-ring"
-    >
-      <Github className="w-5 h-5 mr-2" />
-      View More on GitHub
-    </a>
-  </div>
-</section>
+          >
+            <Github className="w-5 h-5 mr-2" />
+            View More on GitHub
+          </a>
+        </div>
+      </section>
 
       {/* Technologies Section */}
       <section className="w-full py-16 flex flex-col items-center">
