@@ -33,7 +33,7 @@ export default function Home() {
       githubLink: "https://github.com/OmkarKathile007/Intelliquiz_Main",
     },
     {
-      title: "GenX AI",
+      title: "GenxAI",
       description:
         "A next-generation AI platform offering 6+ productivity tools and accurate, on-demand insights powered by top trending AI models",
       tags: ["NextJs", "SpringBoot", "Gemini AI", "Tailwind CSS"],
@@ -299,3 +299,4 @@ export default function Home() {
     </div>
   );
 }
+
